@@ -4,7 +4,7 @@ import "fmt"
 
 func Insert(arr []int, index, element int) ([]int, error) {
 	if index < 0 || index > len(arr) {
-		return arr, fmt.Errorf("Invalid index")
+		return arr, fmt.Errorf("invalid index")
 	}
 	arr = append(arr[:index+1], arr[index:]...)
 	arr[index] = element
@@ -13,7 +13,7 @@ func Insert(arr []int, index, element int) ([]int, error) {
 
 func Delete(arr []int, index int) ([]int, error) {
 	if index < 0 || index >= len(arr) {
-		return arr, fmt.Errorf("Invalid index")
+		return arr, fmt.Errorf("invalid index")
 	}
 	arr = append(arr[:index], arr[index+1:]...)
 	return arr, nil
@@ -25,7 +25,7 @@ func Search(arr []int, element int) (int, error) {
 			return k, nil
 		}
 	}
-	return -1, fmt.Errorf("No such value")
+	return -1, fmt.Errorf("no such value")
 }
 
 func Reverse(arr []int) ([]int, error) {
